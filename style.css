@@ -24,24 +24,21 @@ html {
 
 /* RESPONSIVE */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 20px 40px;
     }
     .hero {
-        padding-left: 40px;
-    }
-    .scroll-indicator {
-        left: 40px;
+        padding: 0 40px;
     }
     .projects {
         padding: 80px 40px;
     }
-    .case-content {
-        padding: 80px 40px;
-    }
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    .case-content {
+        padding: 80px 40px;
     }
     .contact {
         padding: 80px 40px;
@@ -85,41 +82,49 @@ html {
 /* HERO */
 
 .hero {
-    min-height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
-    padding-left: 120px;
-    padding-top: 80px;
+    justify-content: center;
+    padding: 0 10%;
 }
 
 .hero-content {
     max-width: 600px;
 }
 
-.hero-intro {
+.hero h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: 400;
     color: #666;
-    font-size: 14px;
     margin-bottom: 20px;
 }
 
-.hero-name {
-    font-size: 72px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.hero-role {
-    font-size: 28px;
-    font-weight: 400;
-    color: #888;
-    margin-top: 10px;
-}
-
-.hero-desc {
-    margin-top: 30px;
-    color: #aaa;
-    max-width: 500px;
+.hero p {
+    font-size: 18px;
     line-height: 1.6;
+    margin-bottom: 30px;
+    color: #aaa;
+    text-align: justify;
+}
+
+.hero-button {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+    transition: opacity 0.3s;
+}
+
+.hero-button:hover {
+    opacity: 0.6;
 }
 
 
@@ -134,17 +139,43 @@ html {
 }
 
 
-/* PROJECTS */
+/* ABOUT */
+
+.about {
+    padding: 120px 10%;
+    max-width: 900px;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+
+/* PROJECT SECTION */
 
 .projects {
-    padding: 100px 120px;
+    padding: 120px 10%;
+}
+
+.projects-header {
+    margin-bottom: 60px;
 }
 
 .projects-header h2 {
     font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 60px;
+    font-weight: 600;
 }
+
+
+/* GRID LAYOUT */
 
 .projects-grid {
     display: grid;
@@ -156,38 +187,49 @@ html {
 /* PROJECT CARD */
 
 .project-card {
-    cursor: pointer;
     text-decoration: none;
-    color: inherit;
+    color: white;
     display: block;
+    overflow: hidden;
 }
+
+
+/* IMAGE CONTAINER */
 
 .project-card img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.03);
+    transition: transform 0.4s ease;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     opacity: 0.9;
 }
 
+
+/* IMAGE HOVER ZOOM */
+
+.project-card:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+/* INFO */
+
 .project-info {
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
 .project-info h3 {
-    margin: 0;
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 .project-info p {
-    margin-top: 5px;
-    color: #888;
     font-size: 14px;
+    color: #666;
 }
 
 
@@ -242,7 +284,7 @@ html {
 /* CONTACT */
 
 .contact {
-    padding: 100px 120px;
+    padding: 120px 10%;
     border-top: 1px solid #222;
 }
 
@@ -270,4 +312,111 @@ html {
 
 .contact-links a:hover {
     opacity: 0.5;
+}
+
+
+/* FADE IN ANIMATION */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* STAGGER ANIMATION */
+
+.project-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* PROJECT IMAGE CONTAINER */
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.project-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+/* OVERLAY */
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+
+/* TEXT */
+
+.project-overlay h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-overlay p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+/* HOVER EFFECT */
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* PAGE TRANSITION */
+
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: #0b0b0b;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+
+/* active state */
+
+.page-transition.active {
+    opacity: 1;
+    pointer-events: all;
 }
