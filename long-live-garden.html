@@ -2,115 +2,151 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Long Live Garden — Dhimas Ramaditya</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+    <div class="page-transition"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html#hero">
+                <img src="assets/images/logo.png" alt="Logo" class="nav-logo-img">
+            </a>
+            <!-- <span class="nav-logo-name">Dhimas Ramaditya</span> -->
+        </div>
+        <div class="nav-menu">
+            <a href="index.html#hero">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
     <!-- HERO IMAGE -->
-
-    <section class="case-hero">
-        <img src="assets/images/project1.jpg">
-    </section>
-
-
-
-    <!-- PROJECT INFO -->
-
-    <section class="case-content">
-        <h1 class="case-title">
-            Long Live Garden
-        </h1>
-
-        <div class="case-meta">
-
-            <div>
-                <p class="label">Role</p>
-                <p>Game Designer</p>
+    <div class="cs-hero fade-in">
+        <img src="assets/images/llg_preview.jpg" alt="Long Live Garden">
+        <div class="cs-hero-overlay">
+            <div class="cs-hero-inner">
+                <span class="cs-hero-tag">Case Study</span>
+                <h1 class="cs-hero-title">Long Live Garden</h1>
+                <p class="cs-hero-sub">Level Design · System Design</p>
             </div>
+        </div>
+    </div>
 
-            <div>
-                <p class="label">Focus</p>
-                <p>Level Design, System Design</p>
+    <!-- CONTENT -->
+    <main class="cs-body">
+
+        <!-- META BAR -->
+        <div class="cs-meta fade-in">
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Role</span>
+                <span class="cs-meta-value">Game Designer</span>
             </div>
-
-            <div>
-                <p class="label">Year</p>
-                <p>2026</p>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Focus</span>
+                <span class="cs-meta-value">Level Design, System Design</span>
             </div>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Year</span>
+                <span class="cs-meta-value">2026</span>
+            </div>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Platform</span>
+                <span class="cs-meta-value">PC / Browser</span>
+            </div>
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="cs-sections">
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">01 — Overview</div>
+                <div class="cs-section-body">
+                    <h2>What is Long Live Garden?</h2>
+                    <p>Long Live Garden is a cozy puzzle game where players strategically manage plants, tools, and resources to keep a garden alive. The player takes on the role of a caretaker who must balance the health, growth, and survival of multiple
+                        plant species across progressively complex levels.</p>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">02 — Design Challenge</div>
+                <div class="cs-section-body">
+                    <h2>The Problem</h2>
+                    <p>The core challenge was designing a level progression system that introduces mechanics gradually — ensuring players feel competent without the experience becoming trivial. Frustration spikes from poor pacing were a major risk given
+                        the game's relaxed tone.</p>
+                    <ul class="cs-list">
+                        <li>How do we introduce complexity without overwhelming casual players?</li>
+                        <li>How do we maintain tension in a "cozy" game genre?</li>
+                        <li>How do we structure difficulty so it feels earned, not arbitrary?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">03 — Design Solution</div>
+                <div class="cs-section-body">
+                    <h2>My Approach</h2>
+                    <p>I implemented a structured level progression system built around three pillars: controlled mechanic introduction, graduated difficulty ramping, and deliberate pattern variation to sustain engagement across the full play session.</p>
+                    <div class="cs-highlight">
+                        <p>"Each mechanic was introduced in a safe, low-stakes context before being combined with others — giving players room to experiment without punishment."</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">04 — Design Process</div>
+                <div class="cs-section-body">
+                    <h2>How I Got There</h2>
+                    <ul class="cs-list">
+                        <li>Mapped a level dependency graph to visualize mechanic unlock order</li>
+                        <li>Created a difficulty curve structure with explicit "relief" levels after peaks</li>
+                        <li>Ran multiple playtesting rounds with target audience profiles</li>
+                        <li>Iterated on pacing based on player drop-off data and feedback</li>
+                        <li>Balanced challenge and accessibility across skill levels</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">05 — Result</div>
+                <div class="cs-section-body">
+                    <h2>Outcome</h2>
+                    <p>The progression system successfully improved player retention across all tested sessions. The structured difficulty curve created a satisfying sense of mastery, with players completing the full level set at a significantly higher rate
+                        than the initial prototype.</p>
+                </div>
+            </section>
 
         </div>
 
-
-
-        <!-- OVERVIEW -->
-
-        <div class="case-section">
-            <h2>Overview</h2>
-            <p>
-                Long Live Garden is a puzzle game where players must strategically move plants and obstacles to clear the path and allow the main plant to grow.
-            </p>
-
+        <!-- BACK LINK -->
+        <div class="cs-back fade-in">
+            <a href="index.html#projects" class="cs-back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M5 12l7 7M5 12l7-7"/>
+                </svg> Back to Projects
+            </a>
         </div>
 
+    </main>
 
-
-        <!-- PROBLEM -->
-
-        <div class="case-section">
-            <h2>Design Challenge</h2>
-            <p>
-                The challenge was designing level progression that introduces mechanics gradually while maintaining player engagement and avoiding frustration spikes.
-            </p>
-
-        </div>
-
-
-
-        <!-- SOLUTION -->
-
-        <div class="case-section">
-            <h2>Design Solution</h2>
-            <p>
-                I implemented a structured level progression system using controlled mechanic introduction, difficulty ramping, and pattern variation to maintain engagement.
-            </p>
-
-        </div>
-
-
-
-        <!-- PROCESS -->
-
-        <div class="case-section">
-            <h2>Design Process</h2>
-            <p>
-                - Designed level dependency graph - Created difficulty curve structure - Iterated based on playtesting - Balanced challenge and accessibility
-            </p>
-
-        </div>
-
-
-
-        <!-- RESULT -->
-
-        <div class="case-section">
-            <h2>Result</h2>
-            <p>
-                The progression system successfully improved player retention and provided a satisfying difficulty curve.
-            </p>
-
-        </div>
-
-
-    </section>
-
-
+    <script src="./script.js"></script>
 </body>
 
 </html>

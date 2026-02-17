@@ -2,24 +2,19 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhimas Ramaditya — Game Designer</title>
+    <title>Dhimas Ramaditya – Game Designer</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
     <div class="page-transition"></div>
-
     <nav class="navbar">
         <div class="nav-logo">
-            Dhimas Ramaditya
+            <img src="assets/images/logo.png" alt="Logo" class="nav-logo-img">
+            <!-- <span class="nav-logo-name">Dhimas Ramaditya</span> -->
         </div>
-
         <div class="nav-menu">
             <a href="#hero">About</a>
             <a href="#projects">Projects</a>
@@ -27,106 +22,189 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-
-    <section class="hero fade-in" id="hero">
+    <!-- HERO -->
+    <section class="hero" id="hero">
         <div class="hero-content">
-            <h1>Dhimas Ramaditya</h1>
-            <h2>Game Designer</h2>
 
-            <p>
-                I’m a Game Designer with 2 years of experience in the game industry, where I design engaging gameplay systems, balanced level structures, and scalable game economies. Over the past two years, I’ve been involved in every stage of game development—from
-                concepting and prototyping to balancing, polishing, and supporting live games. I work closely with developers, artists, and product teams to bring ideas to life in a fun, functional, and meaningful way.
-            </p>
+            <!-- LEFT: photo in glowing circle -->
+            <div class="hero-image-wrap">
+                <div class="hero-glow"></div>
+                <div class="hero-circle">
+                    <img src="assets/images/profile.png" alt="Dhimas Ramaditya">
+                </div>
+            </div>
 
-            <a href="#projects" class="hero-button">
-            View My Work ↓
-            </a>
+            <!-- RIGHT: text -->
+            <div class="hero-text fade-in">
+                <p class="hero-greeting">Hi, It's</p>
+                <h1 class="hero-name">Dhimas Ramaditya</h1>
+                <h2 class="hero-role">
+                    I'm a <span class="hero-typed" id="heroTyped"></span><span class="hero-cursor">|</span>
+                </h2>
+                <p class="hero-desc">
+                    A Game Designer with 2 years of experience designing engaging gameplay systems, balanced level structures, and scalable game economies — from concepting to live support.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="hero-btn-primary">Hire me</a>
+                    <a href="#projects" class="hero-btn-secondary">View Work</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <!--<section class="about fade-in" id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Game Designer specializing in gameplay systems, progression design, and player experience.
-        </p>
-    </section> -->
-
-    <!-- PROJECT SECTION -->
+    <!-- PROJECTS -->
     <section class="projects fade-in" id="projects">
+
         <div class="projects-header">
             <h2>Featured Projects</h2>
         </div>
 
-        <div class="projects-grid">
-            <a href="long-live-garden.html" class="project-card">
-                <div class="project-image">
-                    <img src="assets/images/project1.jpg">
-                    <div class="project-overlay">
-                        <h3>Long Live Garden</h3>
-                        <p>Level Design, System Design</p>
-                    </div>
-                </div>
-            </a>
+        <!-- ROW: [prev]  [viewport]  [next] -->
+        <div class="carousel-row">
 
+            <button class="carousel-btn" id="btnPrev" aria-label="Previous project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
 
-            <a href="one-last-journey.html" class="project-card">
-                <div class="project-image">
-                    <img src="assets/images/project2.jpg">
-                    <div class="project-overlay">
-                        <h3>One Last Journey</h3>
-                        <p>Game Design, Economy Design</p>
-                    </div>
-                </div>
-            </a>
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
 
-            <a href="stella-gale.html" class="project-card">
-                <div class="project-image">
-                    <img src="assets/images/project3.jpg">
-                    <div class="project-overlay">
-                        <h3>Stella Gale: The Trials Of Faith</h3>
-                        <p>System Design, Gameplay Design</p>
-                    </div>
+                    <a href="long-live-garden.html" class="carousel-slide" data-index="0">
+                        <div class="slide-image">
+                            <img src="assets/images/llg_preview.jpg" alt="Long Live Garden">
+                            <div class="slide-overlay">
+                                <div class="slide-number">01</div>
+                                <div class="slide-info">
+                                    <h3>Long Live Garden</h3>
+                                    <p>Level Design, System Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="one-last-journey.html" class="carousel-slide" data-index="1">
+                        <div class="slide-image slide-image--video">
+                            <video class="slide-video" src="assets/videos/olj_trailer.mp4" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback"></video>
+                            <div class="slide-overlay">
+                                <div class="slide-number">02</div>
+                                <div class="slide-info">
+                                    <h3>One Last Journey</h3>
+                                    <p>Game Design, Economy Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="stella-gale.html" class="carousel-slide" data-index="2">
+                        <div class="slide-image slide-image--video">
+                            <video class="slide-video" src="assets/videos/stellagale_trailer.mp4" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback"></video>
+                            <div class="slide-overlay">
+                                <div class="slide-number">03</div>
+                                <div class="slide-info">
+                                    <h3>Stella Gale: The Trials Of Faith</h3>
+                                    <p>System Design, Gameplay Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
-            </a>
+            </div>
+
+            <button class="carousel-btn" id="btnNext" aria-label="Next project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- THUMBNAILS — centered below preview -->
+        <div class="carousel-thumbnails" id="carouselThumbs">
+
+            <div class="thumb-item active" data-index="0">
+                <div class="thumb-image">
+                    <img src="assets/images/thumbnail_llg.png" alt="Long Live Garden">
+                </div>
+                <div class="thumb-dot"></div>
+            </div>
+
+            <div class="thumb-item" data-index="1">
+                <div class="thumb-image">
+                    <img src="assets/images/thumbnail_olj.png" alt="One Last Journey">
+                </div>
+                <div class="thumb-dot"></div>
+            </div>
+
+            <div class="thumb-item" data-index="2">
+                <div class="thumb-image">
+                    <img src="assets/images/thumbnail_sg.png" alt="Stella Gale">
+                </div>
+                <div class="thumb-dot"></div>
+            </div>
 
         </div>
 
     </section>
 
     <!-- CONTACT -->
-
     <section class="contact fade-in" id="contact">
 
-        <h2 class="contact-title">
-            Contact
-        </h2>
+        <div class="contact-rule"></div>
 
-        <p class="contact-desc">
-            Feel free to reach out for collaboration, opportunities, or just to say hello.
-        </p>
+        <div class="contact-inner">
 
-        <div class="contact-links">
+            <div class="contact-left">
+                <span class="contact-label">Get in touch</span>
+                <h2 class="contact-headline">
+                    Let's work<br>together.
+                </h2>
+                <p class="contact-sub">
+                    Open to collaboration, full-time roles,<br> or just a good conversation about games.
+                </p>
+            </div>
 
-            <a href="dhimas2805@gmail.com">
-                Email
-            </a>
+            <div class="contact-right">
 
-            <a href="https://linkedin.com/in/dhimas-ramaditya" target="_blank">
-                LinkedIn
-            </a>
+                <a class="contact-link" href="mailto:dhimas2805@gmail.com">
+                    <span class="contact-link__label">Email</span>
+                    <span class="contact-link__value">dhimas2805@gmail.com</span>
+                    <svg class="contact-link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
 
-            <a href="https://github.com/kira2801" target="_blank">
-                GitHub
-            </a>
+                <a class="contact-link" href="https://linkedin.com/in/dhimas-ramaditya" target="_blank">
+                    <span class="contact-link__label">LinkedIn</span>
+                    <span class="contact-link__value">dhimas-ramaditya</span>
+                    <svg class="contact-link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
 
+                <a class="contact-link" href="https://github.com/kira2801" target="_blank">
+                    <span class="contact-link__label">GitHub</span>
+                    <span class="contact-link__value">kira2801</span>
+                    <svg class="contact-link__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="contact-footer">
+            <span>© 2025 Dhimas Ramaditya</span>
+            <span>Game Designer</span>
         </div>
 
     </section>
 
     <script src="./script.js"></script>
-
 </body>
 
 </html>

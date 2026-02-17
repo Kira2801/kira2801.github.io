@@ -2,115 +2,159 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Last Journey — Dhimas Ramaditya</title>
+    <title>Stella Gale: The Trials Of Faith — Dhimas Ramaditya</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+    <div class="page-transition"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html#hero">
+                <img src="assets/images/logo.png" alt="Logo" class="nav-logo-img">
+            </a>
+            <!-- <span class="nav-logo-name">Dhimas Ramaditya</span> -->
+        </div>
+        <div class="nav-menu">
+            <a href="index.html#hero">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
     <!-- HERO IMAGE -->
-
-    <section class="case-hero">
-        <img src="assets/images/project3.jpg">
-    </section>
-
-
-
-    <!-- PROJECT INFO -->
-
-    <section class="case-content">
-        <h1 class="case-title">
-            One Last Journey
-        </h1>
-
-        <div class="case-meta">
-
-            <div>
-                <p class="label">Role</p>
-                <p>Game Designer</p>
+    <div class="cs-hero fade-in">
+        <img src="assets/images/sg_preview.jpg" alt="Stella Gale">
+        <div class="cs-hero-overlay">
+            <div class="cs-hero-inner">
+                <span class="cs-hero-tag">Case Study</span>
+                <h1 class="cs-hero-title">Stella Gale: The Trials Of Faith</h1>
+                <p class="cs-hero-sub">System Design · Gameplay Design</p>
             </div>
+        </div>
+    </div>
 
-            <div>
-                <p class="label">Focus</p>
-                <p>Level Design, System Design</p>
+    <!-- CONTENT -->
+    <main class="cs-body">
+
+        <!-- META BAR -->
+        <div class="cs-meta fade-in">
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Role</span>
+                <span class="cs-meta-value">Game Designer</span>
             </div>
-
-            <div>
-                <p class="label">Year</p>
-                <p>2026</p>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Focus</span>
+                <span class="cs-meta-value">System Design, Gameplay Design</span>
             </div>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Year</span>
+                <span class="cs-meta-value">2026</span>
+            </div>
+            <div class="cs-meta-divider"></div>
+            <div class="cs-meta-item">
+                <span class="cs-meta-label">Engine</span>
+                <span class="cs-meta-value">Unity</span>
+            </div>
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="cs-sections">
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">01 — Overview</div>
+                <div class="cs-section-body">
+                    <h2>What is Stella Gale?</h2>
+                    <p>Stella Gale: The Trials Of Faith is an action-adventure game built in Unity. Players navigate arena-based combat encounters, facing enemies with distinct behavioral patterns across a series of escalating trials. The game is available
+                        on Steam.</p>
+                    <a href="https://store.steampowered.com/app/1538710/StellaGale_The_Trials_Of_Faith/" target="_blank" class="cs-external-link">
+                        View on Steam
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">02 — Design Challenge</div>
+                <div class="cs-section-body">
+                    <h2>The Problem</h2>
+                    <p>Designing scalable arena combat systems that feel fair, readable, and increasingly challenging — without becoming repetitive or overwhelming. Enemy behaviors needed to be modular enough to combine interestingly while remaining predictable
+                        enough for player counterplay.</p>
+                    <ul class="cs-list">
+                        <li>How do we design enemy behaviors that are readable but not trivial?</li>
+                        <li>How do we scale arena difficulty across a full trial arc?</li>
+                        <li>How do we document systems clearly enough for a cross-discipline team?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">03 — Design Solution</div>
+                <div class="cs-section-body">
+                    <h2>My Approach</h2>
+                    <p>I designed a modular enemy behavior system with clearly defined aggression states, attack telegraphs, and cooldown windows. Arena layouts were built to support 1v1, 1vMany, and mixed encounter types with dedicated spawn and navigation
+                        zones.
+                    </p>
+                    <div class="cs-highlight">
+                        <p>"Every enemy archetype was defined by a single dominant behavior — making them immediately readable while creating interesting combinations when paired with others."</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">04 — Design Process</div>
+                <div class="cs-section-body">
+                    <h2>How I Got There</h2>
+                    <ul class="cs-list">
+                        <li>Created and implemented Level Arena layouts directly in Unity</li>
+                        <li>Wrote detailed design documents for Minigames and Side Quests</li>
+                        <li>Documented Enemy Behavior specs for the programming team</li>
+                        <li>Designed encounter escalation curves across all trial stages</li>
+                        <li>Collaborated closely with artists on arena visual language and readability</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="cs-divider fade-in"></div>
+
+            <section class="cs-section fade-in">
+                <div class="cs-section-label">05 — Result</div>
+                <div class="cs-section-body">
+                    <h2>Outcome</h2>
+                    <p>The game shipped successfully on Steam with a complete trial arc and functional arena combat system. The modular behavior documentation became a reusable framework for the team, accelerating iteration on new enemy types in the later
+                        development stages.</p>
+                </div>
+            </section>
 
         </div>
 
-
-
-        <!-- OVERVIEW -->
-
-        <div class="case-section">
-            <h2>Overview</h2>
-            <p>
-                One Last Journey is a puzzle game where players must strategically move plants and obstacles to clear the path and allow the main plant to grow.
-            </p>
-
+        <!-- BACK LINK -->
+        <div class="cs-back fade-in">
+            <a href="index.html#projects" class="cs-back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M5 12l7 7M5 12l7-7"/>
+                </svg> Back to Projects
+            </a>
         </div>
 
+    </main>
 
-
-        <!-- PROBLEM -->
-
-        <div class="case-section">
-            <h2>Design Challenge</h2>
-            <p>
-                The challenge was designing level progression that introduces mechanics gradually while maintaining player engagement and avoiding frustration spikes.
-            </p>
-
-        </div>
-
-
-
-        <!-- SOLUTION -->
-
-        <div class="case-section">
-            <h2>Design Solution</h2>
-            <p>
-                I implemented a structured level progression system using controlled mechanic introduction, difficulty ramping, and pattern variation to maintain engagement.
-            </p>
-
-        </div>
-
-
-
-        <!-- PROCESS -->
-
-        <div class="case-section">
-            <h2>Design Process</h2>
-            <p>
-                - Designed level dependency graph - Created difficulty curve structure - Iterated based on playtesting - Balanced challenge and accessibility
-            </p>
-
-        </div>
-
-
-
-        <!-- RESULT -->
-
-        <div class="case-section">
-            <h2>Result</h2>
-            <p>
-                The progression system successfully improved player retention and provided a satisfying difficulty curve.
-            </p>
-
-        </div>
-
-
-    </section>
-
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
